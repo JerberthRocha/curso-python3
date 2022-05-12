@@ -58,3 +58,5 @@ while True:
         print(f'Palavra incompleta: {secreto_temporario}')
 
     print(20 * '-=')
+
+# Listas
