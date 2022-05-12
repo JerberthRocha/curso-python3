@@ -5,4 +5,4 @@ print(texto[2])
 print(texto[7])
 print(texto[2:6])
 # continue - pula para a próxima iteração do laço
-# for - sai do laço
+# break - sai do laço
