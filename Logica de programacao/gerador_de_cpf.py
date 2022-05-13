@@ -1,3 +1,4 @@
+#VALIDAR CPF
 from random import randint
 n = randint(100000000, 999999999)
 cpf = str(n)
