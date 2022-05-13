@@ -1,4 +1,3 @@
-#VALIDAR CPF
 from random import randint
 n = randint(100000000, 999999999)
 cpf = str(n)
@@ -20,4 +19,4 @@ for index in range(19):
         total = 0
         cpf += str(proximo_digito)
 
-print(f'CPF gerado: {cpf}.')
+print(f'CPF gerado: {cpf}')
