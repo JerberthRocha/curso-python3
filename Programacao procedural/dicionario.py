@@ -1,4 +1,4 @@
-import copy
+# import copy
 
 # d1 = {
 #     'chave1': 'valor1',
@@ -86,4 +86,3 @@ print(f'DICIONÁRIO APÓS A FUNÇÃO popitem: {d1}')
 print()
 d1.update(para_concat)
 print(f'DICIONÁRIO APÓS A FUNÇÃO CONCATENAÇÃO: {d1}')
-
