@@ -19,4 +19,4 @@ for index in range(19):
         total = 0
         cpf += str(proximo_digito)
 
-print(f'CPF gerado: {cpf}.')
+print(f'CPF gerado: {cpf}')
