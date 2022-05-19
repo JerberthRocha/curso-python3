@@ -1,4 +1,4 @@
-import  json
+import json
 
 with open('arquivo.json', 'r') as file:
     d1_json = file.read()
