@@ -24,42 +24,47 @@ Recap.
 import funcoes
 
 cnpj = funcoes.remove_caracteres('04.252.011/0001-10')
-novo_cnpj = cnpj[:-2]
-multiplicador = 5
-segundo = 9
-total = 0
-for index in range(26):
-    if index < 12:
-        if index == 4:
-            multiplicador = 9
-        if multiplicador > 1:
-            total += int(novo_cnpj[index]) * multiplicador
-            multiplicador -= 1
-    else:
-        if index == 12:
-            novo_numero = 11 - (total % 11)
-            if novo_numero > 9:
-                novo_cnpj += '0'
-            else:
-                novo_cnpj += str(novo_numero)
-
-    if index >= 12:
-        if index == 12:
-            multiplicador = 6
-            total = 0
-        if index == 17:
-            multiplicador = 9
-        if multiplicador > 1:
-            total += int(novo_cnpj[index-12]) * multiplicador
-            multiplicador -= 1
+if cnpj == '00000000000000':
+    print('INVÁLIDO!')
+else:
+    novo_cnpj = cnpj[:-2]
+    multiplicador = 5
+    segundo = 9
+    total = 0
+    for index in range(26):
+        if index < 12:
+            if index == 4:
+                multiplicador = 9
+            if multiplicador > 1:
+                total += int(novo_cnpj[index]) * multiplicador
+                multiplicador -= 1
         else:
-            if index == 25:
+            if index == 12:
                 novo_numero = 11 - (total % 11)
                 if novo_numero > 9:
                     novo_cnpj += '0'
                 else:
                     novo_cnpj += str(novo_numero)
 
-if novo_cnpj == cnpj:
-    print(f'Novo CNPJ: {novo_cnpj} | CNPJ: {cnpj}')
-    print('\n\t\t\t\t\t\tVÁLIDO!')
+        if index >= 12:
+            if index == 12:
+                multiplicador = 6
+                total = 0
+            if index == 17:
+                multiplicador = 9
+            if multiplicador > 1:
+                total += int(novo_cnpj[index-12]) * multiplicador
+                multiplicador -= 1
+            else:
+                if index == 25:
+                    novo_numero = 11 - (total % 11)
+                    if novo_numero > 9:
+                        novo_cnpj += '0'
+                    else:
+                        novo_cnpj += str(novo_numero)
+
+    if novo_cnpj == cnpj:
+        print(f'Novo CNPJ: {novo_cnpj} | CNPJ: {cnpj}')
+        print('\n\t\t\t\t\t\tVÁLIDO!')
+    else:
+        print('INVÁLIDO!')
