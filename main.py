@@ -1,2 +1,17 @@
-from Programacao_procedural.vendas import calcula_preco
-print('Hello Word!')
+from Orientacao_a_objetos.classe_pessoa import Pessoa
+p1 = Pessoa('Maria', 29)
+p2 = Pessoa('José', 32)
+
+p1.comer('pizza')
+p1.falar('POO')
+p1.parar_de_comer()
+p1.comer('pizza')
+p2.comer('servete')
+p2.parar_de_comer()
+p1.parar_de_comer()
+p2.falar('futsal')
+p1.falar('futebol')
+p1.comer('carne')
+p2.comer('pipoca')
+p1.parar_de_falar()
+p2.parar_de_falar()
