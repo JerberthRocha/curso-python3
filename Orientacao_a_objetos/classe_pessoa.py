@@ -1,18 +1,25 @@
+from random import randint
+
 class Pessoa:
-    ano_atual = 2022 # atributo de classe
+    ano_atual = 2022 # ATRIBUTO DA CLASSE
     def __init__(self, nome, idade, comendo=False, falando=False):
         self.nome = nome
         self.idade = idade
         self.comendo = comendo
         self.falando = falando
+    
+    def get_ano_nascimento(self): # MÉTODO DE INSTÂNCIA
+        print(self.ano_atual - self.idade)
 
-    @classmethod
+    @classmethod # MÉTODO DA CLASSE
     def por_ano_de_nascimento(cls, nome, ano_nascimento):
         idade = cls.ano_atual - ano_nascimento
         return cls(nome, idade)
-
-    def get_ano_nascimento(self):
-        print(self.ano_atual - self.idade)
+    
+    @staticmethod # MÉTODO ESTÁTICO - NÃO UTILIZA CLASSE NEM INSTÂNCIA
+    def gera_id():
+        rand = randint(10000, 19999)
+        return rand
 
     def falar(self, assunto):
         if self.comendo:
