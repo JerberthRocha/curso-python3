@@ -1,9 +1,18 @@
 class Pessoa:
+    ano_atual = 2022 # atributo de classe
     def __init__(self, nome, idade, comendo=False, falando=False):
         self.nome = nome
         self.idade = idade
         self.comendo = comendo
         self.falando = falando
+
+    @classmethod
+    def por_ano_de_nascimento(cls, nome, ano_nascimento):
+        idade = cls.ano_atual - ano_nascimento
+        return cls(nome, idade)
+
+    def get_ano_nascimento(self):
+        print(self.ano_atual - self.idade)
 
     def falar(self, assunto):
         if self.comendo:
