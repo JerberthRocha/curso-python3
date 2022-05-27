@@ -38,23 +38,44 @@
 
 
 # ASSOCIAÇÃO
-from Orientacao_a_objetos.associacao import Escritor, MaquinaDeEscrever, Caneta
+# from Orientacao_a_objetos.associacao import Escritor, MaquinaDeEscrever, Caneta
 
 
-escritor1 = Escritor('Clarisse')
-escritor2 = Escritor('Maria')
+# escritor1 = Escritor('Clarisse')
+# escritor2 = Escritor('Maria')
 
-caneta1 = Caneta('Bic')
-maquina1 = MaquinaDeEscrever()
+# caneta1 = Caneta('Bic')
+# maquina1 = MaquinaDeEscrever()
 
-caneta1.ferramenta = caneta1
-caneta1.ferramenta.escrever()
+# caneta1.ferramenta = caneta1
+# caneta1.ferramenta.escrever()
 
-escritor2.ferramenta = maquina1
-escritor2.ferramenta.escrever()
+# escritor2.ferramenta = maquina1
+# escritor2.ferramenta.escrever()
 
 # caneta1 = Caneta('Bic')
 # print(caneta1.marca)
 
 # maquina1 = MaquinaDeEscrever()
 # maquina1.escrever()
+
+
+# AGREGAÇÃO - UM TIPO DE ASSOCIAÇÃO QUE UMA CLASSE DEPENDE DA OUTRA PARA FUNCIONAR CORRETAMENTE
+from Orientacao_a_objetos.agregacao import CarrinhoDeCompras, Produto
+
+carrinho = CarrinhoDeCompras()
+p1 = Produto('Camiseta', 50)
+p2 = Produto('Calça', 150)
+p3 = Produto('Celular', 1250)
+carrinho.inserir_produto(p1)
+carrinho.inserir_produto(p2)
+carrinho.inserir_produto(p3)
+carrinho.inserir_produto(p2)
+carrinho.inserir_produto(p1)
+carrinho.inserir_produto(p2)
+carrinho.inserir_produto(p3)
+carrinho.inserir_produto(p2)
+
+carrinho.lista_produto()
+
+print('Valor total: ', carrinho.soma_total())
