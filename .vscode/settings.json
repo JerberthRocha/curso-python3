@@ -3,10 +3,12 @@
         "agregacao",
         "associacao",
         "composicao",
+        "Eletronico",
         "endereco",
         "Endereco",
         "enderecos",
         "heranca",
+        "multipla",
         "Orientacao",
         "Variavel"
     ]

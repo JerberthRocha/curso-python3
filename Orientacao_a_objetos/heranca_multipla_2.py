@@ -1,0 +1,15 @@
+from heranca_multipla import Smartphone
+
+smartphone = Smartphone('Moto G6')
+smartphone.conectar()
+smartphone.desligar()
+smartphone.ligar()
+smartphone.desconectar()
+smartphone.conectar()
+smartphone.ligar()
+smartphone.desligar()
+smartphone.conectar()
+smartphone.conectar()
+smartphone.conectar()
+smartphone.conectar()
+smartphone.conectar()
