@@ -61,21 +61,45 @@
 
 
 # AGREGAÇÃO - UM TIPO DE ASSOCIAÇÃO QUE UMA CLASSE DEPENDE DA OUTRA PARA FUNCIONAR CORRETAMENTE
-from Orientacao_a_objetos.agregacao import CarrinhoDeCompras, Produto
+# from Orientacao_a_objetos.agregacao import CarrinhoDeCompras, Produto
 
-carrinho = CarrinhoDeCompras()
-p1 = Produto('Camiseta', 50)
-p2 = Produto('Calça', 150)
-p3 = Produto('Celular', 1250)
-carrinho.inserir_produto(p1)
-carrinho.inserir_produto(p2)
-carrinho.inserir_produto(p3)
-carrinho.inserir_produto(p2)
-carrinho.inserir_produto(p1)
-carrinho.inserir_produto(p2)
-carrinho.inserir_produto(p3)
-carrinho.inserir_produto(p2)
+# carrinho = CarrinhoDeCompras()
+# p1 = Produto('Camiseta', 50)
+# p2 = Produto('Calça', 150)
+# p3 = Produto('Celular', 1250)
+# carrinho.inserir_produto(p1)
+# carrinho.inserir_produto(p2)
+# carrinho.inserir_produto(p3)
+# carrinho.inserir_produto(p2)
+# carrinho.inserir_produto(p1)
+# carrinho.inserir_produto(p2)
+# carrinho.inserir_produto(p3)
+# carrinho.inserir_produto(p2)
 
-carrinho.lista_produto()
+# carrinho.lista_produto()
 
-print('Valor total: ', carrinho.soma_total())
+# print('Valor total: ', carrinho.soma_total())
+
+
+# COMPOSIÇÃO - UMA CLASSE SE TORNA DONA DE OBJETOS DE UMA OUTRA CLASSE
+from Orientacao_a_objetos.composicao import Cliente
+
+c1 = Cliente('Jerberth', 29)
+c1.insere_endereco('Manaus', 'AM')
+
+c2 = Cliente('Maria', 58)
+c2.insere_endereco('Luis Domingues', 'MA')
+
+c3 = Cliente('José', 66)
+c3.insere_endereco('Luis Domingues', 'MA')
+
+print(c1.nome)
+c1.lista_endereco()
+print()
+
+print(c2.nome)
+c2.lista_endereco()
+print()
+
+print(c3.nome)
+c3.lista_endereco()
