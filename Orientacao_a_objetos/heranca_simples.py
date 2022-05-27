@@ -20,3 +20,16 @@ class Cliente(Pessoa): # CLIENTE HERDA DE PESSOA
 class Aluno(Pessoa): # ALUNO HERDA DE PESSOA
     def estudar(self):
         print(f'{self.nome_classe} estudando...')
+
+class ClienteVip(Cliente): # TEM TUDO DAS CLASSES PESSOA E CLIENTE
+    def __init__(self, nome, sobrenome, idade): # SOBREPOSIÇÃO DE CONSTRUTOR
+        Pessoa.__init__(self, nome, idade)
+        self.sobrenome = sobrenome
+
+    def falar(self):
+        super().falar() # CHAMA O MÉTODO falar() DA SUPER CLASSE
+        print('método falar sobreposto')
+        print(f'{self.nome} {self.sobrenome}')
+    
+    # def comprar(self):
+    #     print(f'{self.nome_classe} comprando pq sou vip...')

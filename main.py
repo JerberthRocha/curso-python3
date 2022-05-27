@@ -105,19 +105,22 @@
 # c3.lista_endereco()
 
 
-# HERANÇA SIMPLES
-from Orientacao_a_objetos.heranca_simples import Aluno, Cliente, Pessoa
+# HERANÇA SIMPLES E SOBREPOSIÇÃO DE MÉTODOS
+from Orientacao_a_objetos.heranca_simples import Aluno, Cliente, ClienteVip, Pessoa
 
-c1 = Cliente('Maria', 58)
-# print(c1.nome)
-c1.falar()
-c1.comprar()
+# c1 = Cliente('Maria', 58)
+# # print(c1.nome)
+# c1.falar()
+# c1.comprar()
 
+c2 = ClienteVip('Ana', 'Silva', 22)
+c2.falar() # BUSCA O MÉTODO falar() 1º NA CLASSE ClienteVip, SE NÃO TIVER VAI PARA Cliente, SE NÃO TIVER VAI PARA Pessoa
+# c2.comprar()
 
-a1 = Aluno('Jerberth', 29)
-# print(a1.nome)
-a1.falar()
-a1.estudar()
+# a1 = Aluno('Jerberth', 29)
+# # print(a1.nome)
+# a1.falar()
+# a1.estudar()
 
-p1 = Pessoa('João', 33)
-p1.falar()
+# p1 = Pessoa('João', 33)
+# p1.falar()
