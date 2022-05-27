@@ -82,24 +82,42 @@
 
 
 # COMPOSIÇÃO - UMA CLASSE SE TORNA DONA DE OBJETOS DE UMA OUTRA CLASSE
-from Orientacao_a_objetos.composicao import Cliente
+# from Orientacao_a_objetos.composicao import Cliente
 
-c1 = Cliente('Jerberth', 29)
-c1.insere_endereco('Manaus', 'AM')
+# c1 = Cliente('Jerberth', 29)
+# c1.insere_endereco('Manaus', 'AM')
 
-c2 = Cliente('Maria', 58)
-c2.insere_endereco('Luis Domingues', 'MA')
+# c2 = Cliente('Maria', 58)
+# c2.insere_endereco('Luis Domingues', 'MA')
 
-c3 = Cliente('José', 66)
-c3.insere_endereco('Luis Domingues', 'MA')
+# c3 = Cliente('José', 66)
+# c3.insere_endereco('Luis Domingues', 'MA')
 
-print(c1.nome)
-c1.lista_endereco()
-print()
+# print(c1.nome)
+# c1.lista_endereco()
+# print()
 
-print(c2.nome)
-c2.lista_endereco()
-print()
+# print(c2.nome)
+# c2.lista_endereco()
+# print()
 
-print(c3.nome)
-c3.lista_endereco()
+# print(c3.nome)
+# c3.lista_endereco()
+
+
+# HERANÇA SIMPLES
+from Orientacao_a_objetos.heranca_simples import Aluno, Cliente, Pessoa
+
+c1 = Cliente('Maria', 58)
+# print(c1.nome)
+c1.falar()
+c1.comprar()
+
+
+a1 = Aluno('Jerberth', 29)
+# print(a1.nome)
+a1.falar()
+a1.estudar()
+
+p1 = Pessoa('João', 33)
+p1.falar()
