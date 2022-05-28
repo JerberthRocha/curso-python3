@@ -124,3 +124,24 @@
 
 # p1 = Pessoa('João', 33)
 # p1.falar()
+
+
+# CLASSES ABSTRATAS
+from Orientacao_a_objetos.contas import ContaPoupanca, ContaCorrente
+
+cp = ContaPoupanca(111, 222, 0)
+
+cp.depositar(10)
+cp.sacar(5)
+cp.sacar(5)
+cp.sacar(1)
+
+print(15 * '-=')
+
+cc = ContaCorrente(agencia=111, conta=111, saldo=0, limite=500)
+cc.depositar(100)
+cc.sacar(150)
+cc.depositar(500)
+
+
+
