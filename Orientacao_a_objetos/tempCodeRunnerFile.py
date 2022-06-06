@@ -1,0 +1,1 @@
+print(id(a), id(b), id(c))
