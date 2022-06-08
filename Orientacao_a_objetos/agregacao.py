@@ -1,3 +1,5 @@
+# AGREGAÇÃO - UM TIPO DE ASSOCIAÇÃO QUE UMA CLASSE DEPENDE DA OUTRA PARA FUNCIONAR CORRETAMENTE
+
 class CarrinhoDeCompras:
     def __init__(self):
         self.produtos = []
