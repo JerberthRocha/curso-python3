@@ -1,0 +1,16 @@
+from zipfile import ZipFile
+import os
+
+caminho = '/home/jerberth/Área de Trabalho/python'
+with ZipFile('arquivo.zip', 'w') as zip:
+    for arquivo in os.listdir(caminho):
+        caminho_completo = os.path.join(caminho, arquivo)
+        zip.write(caminho_completo, arquivo)
+
+with ZipFile('arquivo.zip', 'r') as zip:
+    for arquivo in zip.namelist():
+        print(arquivo)
+
+# CRIA A PASTA 'Descompactado' E JOGA OS ARQUIVO EXTRAÍDOS NA PASTA 'Descompactado'
+# with ZipFile('arquivo.zip', 'r') as zip:
+#     zip.extractall('Descompactado')
