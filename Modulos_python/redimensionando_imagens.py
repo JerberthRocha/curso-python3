@@ -14,7 +14,7 @@ def main(main_images_folder, nova_largura=250):
             novo_arquivo = nome_arquivo + convertido + extensao
             novo_caminho_completo = os.path.join(raiz, novo_arquivo)
 
-            # if convertido in caminho_completo:
+            # if convertido in caminho_completo:    
             #     os.remove(caminho_completo)
             
             if convertido in caminho_completo:
