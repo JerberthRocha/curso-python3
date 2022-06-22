@@ -3,6 +3,7 @@ from typing import Text
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout
 from PyQt5.QtWidgets import QPushButton, QLineEdit, QSizePolicy
 
+
 class Calculadora(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -17,7 +18,8 @@ class Calculadora(QMainWindow):
         self.display.setStyleSheet(
             '* {background: #FFF; color: #000; font-size: 30px}'
         )
-        self.display.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        self.display.setSizePolicy(
+            QSizePolicy.Preferred, QSizePolicy.Expanding)
 
         self.add_butao(QPushButton('7'), 1, 0, 1, 1)
         self.add_butao(QPushButton('8'), 1, 1, 1, 1)
@@ -75,8 +77,6 @@ class Calculadora(QMainWindow):
 
         botao.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
 
-
-
     def eval_igual(self):
         try:
             self.display.setText(
@@ -84,6 +84,7 @@ class Calculadora(QMainWindow):
             )
         except Exception as e:
             self.display.setText('Conta Inválida.')
+
 
 if __name__ == '__main__':
     qt = QApplication(sys.argv)
