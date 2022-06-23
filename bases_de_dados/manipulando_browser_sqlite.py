@@ -44,7 +44,8 @@ if __name__ == '__main__':
     # agenda.inserir('Maria Carla', 122546)
     # agenda.inserir('Maria Paula', 121546)
     # agenda.inserir('Mariana', 125526)
+    agenda.inserir('Mario', 325526)
 
     # agenda.listar()
     
-    agenda.buscar('Maria')
+    # agenda.buscar('Maria')
