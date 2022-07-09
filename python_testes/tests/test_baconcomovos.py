@@ -6,6 +6,22 @@ Parte 1 (Red) -> Criar o teste e ver falhar
 Parte 2 (Green) -> Criar o código e ver o teste passar
 Parte 3 (Refactor) -> Melhorar o código
 """
+
+try:
+    import sys
+    import os
+
+    sys.path.append(
+        os.path.abspath(
+            os.path.join(
+                os.path.dirname(__file__),
+                '../src'
+            )
+        )
+    )
+except:
+    raise
+
 from baconcomovos import bacon_com_ovos
 import unittest
 
