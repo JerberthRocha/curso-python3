@@ -31,5 +31,5 @@ class TestCalculadoraSubtrai(unittest.TestCase):
         with self.assertRaises(AssertionError):
             subtrai(8, '2')
 
-
-unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

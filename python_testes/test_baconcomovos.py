@@ -56,5 +56,5 @@ class TestBaconComOvos(unittest.TestCase):
                     bacon_com_ovos(entrada), saida
                 )
 
-
-unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
