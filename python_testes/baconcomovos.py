@@ -1,0 +1,29 @@
+"""
+1 - Receber um número inteiro
+2 - Saber se o número é multiplo de 3 e 5:
+    return 'Bacon com ovos'
+3 - Saber se o número é multiplo de 3:
+    return 'Bacon'
+4 - Saber se o número é multiplo de 5:
+    return 'Ovos'
+5 - Saber se o número NÃO é multiplo de 3 nem de 5:
+    return 'Passar fome'
+"""
+
+
+def bacon_com_ovos(n):
+    assert isinstance(n, int), 'n deve ser int'
+
+    if n % 3 == 0 and n % 5 == 0:
+        return 'Bacon com ovos'
+
+    if n % 3 == 0:
+        return 'Bacon'
+
+    if n % 5 == 0:
+        return 'Ovos'
+
+    # if n % 3 != 0 and n % 5 != 0:
+    #     return 'Passar fome'
+    return 'Passar fome'
+    
