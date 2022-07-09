@@ -1,0 +1,2 @@
+Local: dentro da pasta dos testes:
+Comando: python -m unittest -v
