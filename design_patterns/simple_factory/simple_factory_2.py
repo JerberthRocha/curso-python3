@@ -63,8 +63,8 @@ class VeiculoFactory:
 
 
 if __name__ == '__main__':
-    carros_disponiveis = ['luxo', 'popular', 'moto']
+    veiculos_disponiveis = ['luxo', 'popular', 'moto']
 
     for i in range(10):
-        carro = VeiculoFactory(choice(carros_disponiveis))
+        carro = VeiculoFactory(choice(veiculos_disponiveis))
         carro.buscar_cliente()
